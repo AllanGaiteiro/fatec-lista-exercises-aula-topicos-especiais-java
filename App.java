@@ -1,6 +1,6 @@
 
 /*
-4) Construa dois funcionários com o new e compare-os com o ==. E se eles tiverem os mesmos atributos? Para isso você vai precisar criar outra referência:
+5) Crie duas referências para o mesmo funcionário, compare-os com o ==. Tire suas conclusões. Para criar duas referências pro mesmo funcionário:
 */
 public class App {
 
@@ -9,7 +9,7 @@ public class App {
 
         // declare 
         Funcionario f1 = new Funcionario("Allan Gaiteiro", "CTO", 25000, "311.23423.323-23");
-        Funcionario f2 = new Funcionario("Allan Gaiteiro", "CTO", 25000, "311.23423.323-23");
+        Funcionario f2 = f1;
         //Funcionario f3 = new Funcionario();
 
         // change value
@@ -20,7 +20,7 @@ public class App {
         // show
         f1.show();
         f2.show();
-        System.out.println("Funcionario f1 "+(f1 == f2?"":"não")+ " é igual a funcionario f2.");
-        // eles não são iguais pois esta comparando a referencia e não os valores
+        System.out.println("Funcionario f1"+(f1 == f2?"":" não")+ " é igual a funcionario f2.");
+        // eles são iguais pois esta passando a mesma referencia para ambos
     }
 }
