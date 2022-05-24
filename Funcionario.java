@@ -4,7 +4,7 @@ public class Funcionario {
     public String name;
     public String department;
     public double salary;
-    private String createdDate;
+    private Date createdDate;
     public String rg;
 
     public Funcionario() {
@@ -14,15 +14,15 @@ public class Funcionario {
         this.name = name;
         this.department = department;
         this.salary = salary;
-        this.setCreatedDate(new Date().toString());
+        this.setCreatedDate(new Date());
         this.rg = rg;
     }
 
-    public String getCreatedDate() {
+    public Date getCreatedDate() {
         return createdDate;
     }
 
-    private void setCreatedDate(String createdDate) {
+    private void setCreatedDate(Date createdDate) {
         this.createdDate = createdDate;
     }
 
