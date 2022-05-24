@@ -7,6 +7,9 @@ public class Funcionario {
     private String createdDate;
     public String rg;
 
+    public Funcionario() {
+    }
+
     public Funcionario(String name, String department, double salary, String rg) {
         this.name = name;
         this.department = department;
@@ -31,4 +34,14 @@ public class Funcionario {
         return this.salary * 12;
     }
 
+    public void show() {
+        System.out.println("//////////// Funcionario //////////////");
+        System.out.println("Name: " + this.name);
+        System.out.println("Rg: " + this.rg);
+        System.out.println("Department: " + this.department);
+        System.out.println("Salary: $" + this.salary);
+        System.out.println("Annual Salary: " + this.annualSalary());
+        System.out.println("Created Date: " + this.createdDate);
+        System.out.println("////////////////////////////////////////");
+    }
 }
